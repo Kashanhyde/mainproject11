@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Bottles FAQs</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="sitemap.css">
+</head>
+
+<body>
+ <!-- Navbar start -->
+ <nav class="navbar">
+    <div class="logo">Poly<span>Site</span></div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Shop Now</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="FAQ queiries.html">Queries</a></li>
+    </ul>
+
+   
+
+        <!-- Login/Sign Up -->
+        <button class="login-button" onclick="location.href='login.html'">
+            <span class="login-icon"></span>
+            <span class="login-text">Login / Sign Up</span>
+        </button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+<!-- Navbar end-->
+
+    <header id="h">
+        <h1>Plastic Bottles FAQs</h1>
+    </header>
+
+    <div class="container">
+        <div class="faq-item">
+            <h3>Are plastic bottles safe for storing food and drinks?</h3>
+            <p>Yes, but only if they are made from food-grade materials like PET (recycling code 1) or HDPE (recycling
+                code 2). Avoid bottles with codes 3 (PVC) or 7 (other), as they may contain harmful chemicals.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How are plastic bottles recycled?</h3>
+            <p>Plastic bottles are collected, sorted, cleaned, and shredded into small flakes. These flakes are melted
+                and reformed into new products like packaging, textiles, or even new bottles.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What is the environmental impact of plastic bottles?</h3>
+            <p>Plastic bottles contribute to pollution, especially in oceans, where they break down into microplastics.
+                They can take up to 450 years to decompose in landfills.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What are some creative ways to reuse plastic bottles?</h3>
+            <p>You can repurpose plastic bottles into planters, bird feeders, storage containers, or even use them for
+                DIY projects like building materials or decorative items.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can plastic bottles withstand high temperatures?</h3>
+            <p>Most plastic bottles are not designed for high temperatures. Exposing them to heat can cause them to warp
+                or release harmful chemicals. Always check the manufacturer's guidelines.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What percentage of plastic bottles are recycled globally?</h3>
+            <p>Only about 9% of plastic bottles are recycled globally. The rest end up in landfills or the environment,
+                highlighting the need for better recycling practices.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do plastic bottles affect marine life?</h3>
+            <p>Plastic bottles break down into microplastics, which are ingested by marine animals, leading to health
+                issues or death. They also contribute to ocean pollution.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do plastic bottles release harmful chemicals?</h3>
+            <p>Some plastic bottles can release chemicals like BPA or phthalates when exposed to high heat or UV light.
+                Always use bottles labeled "BPA-free" for safety.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is recycling plastic bottles energy-efficient?</h3>
+            <p>Yes, recycling plastic bottles uses significantly less energy compared to producing new ones from raw
+                materials, making it an eco-friendly option.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How long does a plastic bottle last in a landfill?</h3>
+            <p>A plastic bottle can take up to 450 years to decompose in a landfill, making proper recycling crucial for
+                reducing environmental impact.</p>
+        </div>
+    </div>
+
+    <header>
+        <h1>Have More Questions? Ask Us!</h1>
+    </header>
+
+    <div class="container">
+        <form id="queryForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="query">Your Query</label>
+                <textarea id="query" name="query" rows="4" required placeholder="Enter your query"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="hassan.js"></script>
+</body>
+
+</html>
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #0078D7;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+
+    .faq-item h3 {
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .faq-item h3:hover {
+        background-color: #e1e1e1;
+    }
+
+    .faq-item p {
+        display: none;
+        margin: 0;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 4px solid #0078D7;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: #0078D7;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: #005bb5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            padding: 15px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+        }
+
+        button {
+            font-size: 14px;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        // Toggle FAQ answer visibility
+        faqItems.forEach(item => {
+            const question = item.querySelector('h3');
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('p');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    });
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const query = document.getElementById('query').value;
+
+        if (name && email && query) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank you!',
+                text: `We have received your query. Our team will contact you at ${email}.`,
+            });
+        }
+    }
+</script>
+
+<!-- Sitemap and Footer Start -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Polysite specializes in providing premium plastic bottles in all sizes for diverse needs. We focus on
+                quality, durability, and eco-friendly materials to reduce environmental impact. Your trusted choice
+                for sustainable packaging solutions.</p>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="contact-us" class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=Groccerystorepk@gmail.com"
+                    target="_blank">PolySitepk@gmail.com</a></p>
+            <p>Phone: <a href="javascript:void(0)" onclick="copyPhoneNumber()" class="copy-tooltip">+92
+                    3317021329<span class="tooltip">Copied!</span></a></p>
+            <p>Address: Karachi, Pakistan</p>
+        </div>
+
+        <!-- Sitemap Section -->
+        <div class="footer-sitemap">
+            <div class="footer-sitemap-grid">
+                <div class="footer-sitemap-column1">
+                    <h4>Polysite</h4>
+
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Home</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="bottles.html">Bottles</a></li>
+                        <li><a href="caps.html">Caps & Closures</a></li>
+                        <li><a href="honey-bottles.html">Honey Bottles</a></li>
+                        <li><a href="plastic-containers.html">Plastic Containers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Shop Now</h4>
+                    <ul>
+                        <li><a href="shop-now.html">Shop Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/profile.php?id=61570043575715" target="_blank"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/kashanhyder_0620/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </div>
+</footer>

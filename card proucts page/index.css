@@ -1,0 +1,548 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Modern font */
+}
+
+body {
+    background-color: #f9f9f9;
+    /* Light background for a clean look */
+}
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all 0.3s ease;
+    margin-bottom: 4%;
+
+}
+
+/* Logo Styles */
+.navbar .logo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    /* Darker color for better contrast */
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+
+}
+
+.navbar .logo:hover {
+    transform: scale(1.05);
+    /* Subtle hover animation */
+}
+
+.navbar .logo span {
+    color: #0e6de9;
+    /* Accent color for the logo */
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #eeac31;
+    /* Underline effect */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    /* Animated underline on hover */
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #0e6de9;
+    /* Blue accent for hover */
+}
+
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e99e9;
+    /* Blue accent for buttons */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-button:hover {
+    background-color: #0c5bb5;
+    /* Slightly darker blue on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    /* Button hover animation */
+}
+
+
+.login-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 8px;
+    /* Added margin-top for better spacing */
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+        text-align: center;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+   
+
+    .cart-button,
+    .login-button {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-top: 10px;
+        /* Adjusted margin-top for better spacing */
+    }
+
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        bottom: 8px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation: fadeIn 0.5s ease-out;
+    /* Fade-in animation for navbar */
+}
+
+/*slider css*/
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+    height: 520px;
+    /* Set a fixed height or adjust as needed */
+
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth transition */
+    height: 100%;
+    /* Ensure slides take full height of the slider */
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    /* Ensure images take full height of the slide */
+    display: block;
+
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    /* Slightly larger for better touch targets */
+    cursor: pointer;
+    font-size: 20px;
+    /* Larger font size for better visibility */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    /* Slightly transparent by default */
+    z-index: 10;
+    /* Ensure buttons are above the slides */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    /* Fully visible on hover */
+}
+
+.prev {
+    left: 20px;
+    /* Increased spacing from the edge */
+}
+
+.next {
+    right: 20px;
+    /* Increased spacing from the edge */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px;
+        /* Adjust height for tablets */
+    }
+
+    .prev,
+    .next {
+        padding: 10px 14px;
+        /* Slightly smaller buttons for tablets */
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 200px;
+        /* Adjust height for mobile */
+    }
+
+    .prev,
+    .next {
+        padding: 8px 12px;
+        /* Smaller buttons for mobile */
+        font-size: 16px;
+    }
+}
+
+/* Slider Container */
+
+
+/* Cards Container */
+/* Welcome Section Styles */
+#welcome-section {
+    background-color: #93d7ff;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    /* Added margin for spacing */
+    width: 100%;
+
+}
+
+#welcome-section h2 {
+    font-size: 1.6em;
+    color: #0a0808;
+
+}
+
+/* Cards Container */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    /* Added margin for spacing */
+    width: 90%;
+    max-width: 3000px;
+    margin-left: 60px;
+}
+
+/* Individual Card Styles */
+.card {
+    margin-top: 1000px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 400px;
+    /* Increased height to accommodate button */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cards:hover>.card:not(:hover) {
+    filter: blur(3px);
+    transform: scale(0.95);
+}
+
+/* Card Content */
+.card .tip {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.card .second-text {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+    /* Added margin for button spacing */
+    transition: color 0.3s ease;
+}
+
+.card:hover .tip,
+.card:hover .second-text {
+    color: #fff;
+}
+
+/* Button Styles */
+.card .shop-now {
+    background-color: #69db7c;
+    /* Soft green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .shop-now:hover {
+    background-color: #4caf50;
+    /* Darker green on hover */
+}
+
+/* Card Colors */
+.card {
+    background-color: #fff;
+    /* White background */
+    border: 1px solid #e0e0e0;
+    /* Light border for definition */
+}
+
+.card:hover {
+    background-color: #69db7c;
+    /* Soft green on hover */
+
+}
+
+/* Card Image Styles */
+.card-image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+
+/* Product Section Styles */
+#product-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    /* Added margin for spacing */
+}
+
+#product-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .card-image {
+        height: 150px;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        height: 350px;
+        /* Adjusted height for mobile */
+    }
+
+    #welcome-section,
+    #product-section {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    #welcome-section h2 {
+        font-size: 1.8em;
+    }
+
+    #welcome-section p {
+        font-size: 1em;
+    }
+}
+
+/*cards end here*/
+

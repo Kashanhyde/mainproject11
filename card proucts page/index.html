@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolySite</title>
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="sitemap.css">
+</head>
+
+<body>
+    <div id="welcome-section">
+        <h2 id="text-welcome">Welcome to Our Shop!</h2>
+
+    </div>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <div class="logo">Poly<span>Site</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Shop Now</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="FAQ queiries.html">Queries</a></li>
+        </ul>
+
+       
+
+            <!-- Login/Sign Up -->
+            <button class="login-button" onclick="location.href='login.html'">
+                <span class="login-icon"></span>
+                <span class="login-text">Login / Sign Up</span>
+            </button>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <!-- Navbar end-->
+    <!--slider start-->
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="Square-PCR-Homepage-Banner-Slide.png" alt="Slide 1"></div>
+            <div class="slide"><img src="bnr-oval-honey.png" alt="Slide 2"></div>
+            <div class="slide"><img src="bnr-square-bottle.png" alt="Slide 3"></div>
+            <div class="slide"><img src="bnr-HoneyBearSlide-min.png" alt="Slide 4"></div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!--cards start-->
+    <!-- Welcome Section -->
+
+    <!-- Product Section -->
+    <div id="product-section">
+        <h2>Our Products</h2>
+        <p>Discover our carefully curated selection of products designed to meet your needs.</p>
+        <!-- Add product items here -->
+    </div>
+
+    <!-- Sitemap and Footer Start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>Polysite specializes in providing premium plastic bottles in all sizes for diverse needs. We focus on
+                    quality, durability, and eco-friendly materials to reduce environmental impact. Your trusted choice
+                    for sustainable packaging solutions.</p>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div id="contact-us" class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=Groccerystorepk@gmail.com"
+                        target="_blank">PolySitepk@gmail.com</a></p>
+                <p>Phone: <a href="javascript:void(0)" onclick="copyPhoneNumber()" class="copy-tooltip">+92
+                        3317021329<span class="tooltip">Copied!</span></a></p>
+                <p>Address: Karachi, Pakistan</p>
+            </div>
+
+            <!-- Sitemap Section -->
+            <div class="footer-sitemap">
+                <div class="footer-sitemap-grid">
+                    <div class="footer-sitemap-column1">
+                        <h4>Polysite</h4>
+
+                    </div>
+                    <div class="footer-sitemap-column">
+                        <h4>Home</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-sitemap-column">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-sitemap-column">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="bottles.html">Bottles</a></li>
+                            <li><a href="caps.html">Caps & Closures</a></li>
+                            <li><a href="honey-bottles.html">Honey Bottles</a></li>
+                            <li><a href="plastic-containers.html">Plastic Containers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-sitemap-column">
+                        <h4>Shop Now</h4>
+                        <ul>
+                            <li><a href="shop-now.html">Shop Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/profile.php?id=61570043575715" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/kashanhyder_0620/" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for copying phone number -->
+    <script>
+        function copyPhoneNumber() {
+            const phoneNumber = "+92 3317021329";
+            navigator.clipboard.writeText(phoneNumber).then(function () {
+                const tooltip = document.querySelector('.tooltip');
+                tooltip.style.visibility = 'visible';
+                setTimeout(function () {
+                    tooltip.style.visibility = 'hidden';
+                }, 2000);
+            });
+        }
+    </script>
+
+    <!-- Footer End -->
+
+
+    <!--footer end-->
+</body>
+
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Polysite</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+<!-- Navbar start -->
+<nav class="navbar">
+    <div class="logo">Poly<span>Site</span></div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Shop Now</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="FAQ queiries.html">Queries</a></li>
+    </ul>
+
+   
+
+        <!-- Login/Sign Up -->
+        <button class="login-button" onclick="location.href='login.html'">
+            <span class="login-icon"></span>
+            <span class="login-text">Login / Sign Up</span>
+        </button>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>  
+</nav>
+<!-- Navbar end-->
+<div class="contact-img1">
+    <img src="5124556.jpg" alt="background">
+</div>
+
+<style>
+    .contact-img1 img {
+        width: 100%; /* Makes the width extend from left to right */
+        height: 700px; /* Maintains aspect ratio */
+        object-fit: cover;
+         /* Adjust this value to make it smaller */
+         margin-bottom: 100px;
+    }
+</style>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you! Reach out to us for any inquiries about our plastic bottles or other services.</p>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="contact-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Email: <a href="mailto:polysitepk@gmail.com">polysitepk@gmail.com</a></p>
+                <p>Phone: <a href="tel:+923317021329">+92 3317021329</a></p>
+                <p>Address: Karachi, Pakistan</p>
+            </div>
+
+            <!-- Google Map (Optional) -->
+            <div class="map-container">
+                <h2>Our Location</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.999562082566!2d67.34769467624581!3d24.86386454511965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3330027d49fa5%3A0x4a09f9f0a67234f9!2sAptech%20Learning%20Centre%20Gulshan-e-Hadeed%20Branch!5e0!3m2!1sen!2s!4v1738096509586!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #fff;
+   padding: 10px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007BFF;
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Information */
+.contact-info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section */
+.map-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.map-container iframe {
+    border: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border-radius: 8px;
+}
+
+/* Footer */
+/* General Footer and Site Styling */
+.footer {
+    background-color: #222; /* Keep the footer dark background */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;  /* Increased gap between footer sections */
+    max-width: 11200px;
+    margin: 0 auto;
+}
+
+.footer-about{
+    margin-left: 10px;
+}
+
+.footer-contact {
+    flex: 1 1 300px;
+    margin-right: 30px;
+margin-top: 5px;
+}
+
+
+.footer-contact,
+.footer-social {
+    flex: 1 1 300px;
+    margin-right: 30px;
+
+}
+
+/* Section Headings */
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #64bbdd; /* Light blue for section headings */
+}
+
+/* Footer Links and Text */
+.footer p, .footer a {
+    font-size: 1rem;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: #ffffff;
+}
+
+.footer-contact a:hover {
+    color: #76c5fa;
+}
+
+/* Social Media Icons */
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social li {
+    margin: 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    background-color: #444;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: #070607;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Tooltip for Copy Phone Number */
+.copy-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.copy-tooltip.active .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Sitemap Container */
+.sitemap-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Heading for Sitemap */
+.sitemap-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #64bbdd;  /* Light blue for heading */
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+/* Grid Layout for Sitemap */
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Individual Sitemap Column */
+.sitemap-column {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Sitemap Columns */
+.sitemap-column:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title of Each Sitemap Column */
+.sitemap-column h2 {
+    color: #64bbdd;  /* Light blue for section titles */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+/* List Styling Inside Sitemap Columns */
+.sitemap-column ul {
+    list-style-type: none;
+}
+
+/* List Item Styling */
+.sitemap-column ul li {
+    margin: 12px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+.footer-sitemap{
+    margin-right: 250px;
+}
+.footer-sitemap-column1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #64bbdd; /* Light blue for section headings */
+}
+
+/* Adjustments on Smaller Screens */
+@media (max-width: 1024px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .sitemap-container {
+        padding: 20px;
+    }
+
+    .sitemap-container h1 {
+        font-size: 2em;
+    }
+
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*footer end*/
+</style>
+<script>
+    function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields.');
+        return false; // Prevent form submission
+    }
+
+    // Optional: You can add more validation here (e.g., email format, etc.)
+
+    alert('Your message has been sent!');
+    return true; // Allow form submission
+}
+
+</script>
+<!-- Sitemap and Footer Start -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Polysite specializes in providing premium plastic bottles in all sizes for diverse needs. We focus on quality, durability, and eco-friendly materials to reduce environmental impact. Your trusted choice for sustainable packaging solutions.</p>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="contact-us" class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=Groccerystorepk@gmail.com" target="_blank">PolySitepk@gmail.com</a></p>
+            <p>Phone: <a href="javascript:void(0)" onclick="copyPhoneNumber()" class="copy-tooltip">+92 3317021329<span class="tooltip">Copied!</span></a></p>
+            <p>Address: Karachi, Pakistan</p>
+        </div>
+
+        <!-- Sitemap Section -->    
+        <div class="footer-sitemap">
+            <div class="footer-sitemap-grid">
+                <div class="footer-sitemap-column1">
+                    <h4>Polysite</h4>
+                    
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Home</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="bottles.html">Bottles</a></li>
+                        <li><a href="caps.html">Caps & Closures</a></li>
+                        <li><a href="honey-bottles.html">Honey Bottles</a></li>
+                        <li><a href="plastic-containers.html">Plastic Containers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-sitemap-column">
+                    <h4>Shop Now</h4>
+                    <ul>
+                        <li><a href="shop-now.html">Shop Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/profile.php?id=61570043575715" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/kashanhyder_0620/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<!-- Footer End -->

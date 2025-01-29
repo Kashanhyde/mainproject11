@@ -1,0 +1,239 @@
+/* General Footer and Site Styling */
+.footer {
+    background-color: #222; /* Keep the footer dark background */
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;  /* Increased gap between footer sections */
+    max-width: 11200px;
+    margin: 0 auto;
+}
+
+.footer-about{
+    margin-left: 10px;
+}
+
+.footer-contact {
+    flex: 1 1 300px;
+    margin-right: 30px;
+margin-top: 5px;
+}
+
+
+.footer-contact,
+.footer-social {
+    flex: 1 1 300px;
+    margin-right: 30px;
+
+}
+
+/* Section Headings */
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #64bbdd; /* Light blue for section headings */
+}
+
+/* Footer Links and Text */
+.footer p, .footer a {
+    font-size: 1rem;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: #ffffff;
+}
+
+.footer-contact a:hover {
+    color: #76c5fa;
+}
+
+/* Social Media Icons */
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social li {
+    margin: 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    background-color: #444;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: #070607;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Tooltip for Copy Phone Number */
+.copy-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.copy-tooltip.active .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Sitemap Container */
+.sitemap-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Heading for Sitemap */
+.sitemap-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #64bbdd;  /* Light blue for heading */
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+/* Grid Layout for Sitemap */
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Individual Sitemap Column */
+.sitemap-column {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Sitemap Columns */
+.sitemap-column:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title of Each Sitemap Column */
+.sitemap-column h2 {
+    color: #64bbdd;  /* Light blue for section titles */
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+/* List Styling Inside Sitemap Columns */
+.sitemap-column ul {
+    list-style-type: none;
+}
+
+/* List Item Styling */
+.sitemap-column ul li {
+    margin: 12px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+.footer-sitemap{
+    margin-right: 250px;
+}
+.footer-sitemap-column1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #64bbdd; /* Light blue for section headings */
+}
+
+/* Adjustments on Smaller Screens */
+@media (max-width: 1024px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sitemap-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .sitemap-container {
+        padding: 20px;
+    }
+
+    .sitemap-container h1 {
+        font-size: 2em;
+    }
+
+    .sitemap-grid {
+        grid-template-columns: 1fr;
+    }
+}
